@@ -1,5 +1,7 @@
 import "./App.css";
 
+import { Banner } from "./Banner";
+import { NavBar } from "./NavBar";
 import { Row } from "./Row";
 import { requests } from "./requests";
 
@@ -7,8 +9,8 @@ const App = () => {
   return (
     <>
       <div className="App">
-        {/* {navbar} */}
-        {/* {Banner} */}
+        <NavBar />
+        <Banner />
         <Row
           isLargeRow
           title="NOTFLIX ORIGINALS"
