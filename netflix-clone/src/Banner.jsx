@@ -48,8 +48,12 @@ export const Banner = () => {
           </h1>
           {/* {div>2buttons} */}
           <div className="banner__buttons">
-            <button className="banner__button__play">Play</button>
-            <button className="banner__button__info">More Info</button>
+            <button className="banner__button__play">
+              <PlayArrow style={{ paddingRight: 5 }} /> Play
+            </button>
+            <button className="banner__button__info">
+              <InfoOutlined style={{ paddingRight: 5 }} /> More Info
+            </button>
           </div>
           {movie.overview?.length > 500 ? (
             <h1 className="banner__description">

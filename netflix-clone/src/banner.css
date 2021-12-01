@@ -1,5 +1,5 @@
 .banner {
-    min-height: 448px;
+    max-height: 480px;
     color: white;
     object-fit: contain;
 }
@@ -34,6 +34,8 @@
 }
 
 .banner__button__play {
+    display: flex;
+    align-items: center;
     cursor: pointer;
     color: rgba(51, 51, 51, 1);
     outline: none;
@@ -47,6 +49,8 @@
 }
 
 .banner__button__info {
+    display: flex;
+    align-items: center;
     cursor: pointer;
     color: rgba(255, 255, 255, 01);
     outline: none;
@@ -59,8 +63,8 @@
 }
 
 .banner__button__info:hover {
-    color: rgba(255, 255, 255, 0.7);
-    background-color: rgba(51, 51, 51, 0.4);
+    color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(51, 51, 51, 0.5);
     transition: all 300ms;
 }
 

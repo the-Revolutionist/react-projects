@@ -13,7 +13,7 @@ const App = () => {
         <Banner />
         <Row
           isLargeRow
-          title="NOTFLIX ORIGINALS"
+          title="Netflix Originals"
           fetchUrl={requests.fetchNetflixOriginals}
         />
         <Row title="Trending Now" fetchUrl={requests.fetchTrending} />
