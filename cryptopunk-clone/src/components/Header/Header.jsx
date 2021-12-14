@@ -1,8 +1,8 @@
 import "./Header.css";
 
-import punkLogo from "../assets/header/cryptopunk-logo.png";
-import searchIcon from "../assets/header/search.png";
-import themeSwitch from "../assets/header/theme-switch.png";
+import punkLogo from "../../assets/header/cryptopunk-logo.png";
+import searchIcon from "../../assets/header/search.png";
+import themeSwitch from "../../assets/header/theme-switch.png";
 
 export const Header = () => {
   return (
