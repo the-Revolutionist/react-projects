@@ -9,6 +9,7 @@ import axios from "axios";
 
 function App() {
   const [punkListData, setPunkListData] = useState([]);
+  const [activePunk, setActivePunk] = useState("");
 
   useEffect(() => {
     const getMyNfts = async () => {
@@ -23,7 +24,7 @@ function App() {
   return (
     <div className="app">
       <Header />
-      <Main />
+      <Main activePunk={activePunk} />
       <PunkList punkListData={punkListData} />
     </div>
   );
