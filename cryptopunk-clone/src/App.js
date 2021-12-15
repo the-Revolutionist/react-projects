@@ -3,6 +3,7 @@ import "./App.css";
 import { useEffect, useState } from "react";
 
 import { Header } from "./components/Header/Header";
+import { Main } from "./components/main/Main";
 import { PunkList } from "./components/punk-gallery/PunkList";
 import axios from "axios";
 
@@ -22,6 +23,7 @@ function App() {
   return (
     <div className="app">
       <Header />
+      <Main />
       <PunkList punkListData={punkListData} />
     </div>
   );

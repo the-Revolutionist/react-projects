@@ -7,13 +7,15 @@ export const PunkList = ({ punkListData }) => {
     <>
       <div className="punkList">
         {punkListData.map((punk) => (
-          <CollectionCard
-            key={punk.id}
-            id={punk.id}
-            traits={punk.traits}
-            name={punk.name}
-            image={punk.image_url}
-          />
+          <div key={punk.id} className="collectionCardContainer">
+            <CollectionCard
+              key={punk.id}
+              id={punk.id}
+              traits={punk.traits}
+              name={punk.name}
+              image={punk.image_url}
+            />
+          </div>
         ))}
       </div>
     </>
