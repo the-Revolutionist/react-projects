@@ -47,6 +47,10 @@
     cursor: pointer;
 }
 
+.headerItems>p:hover {
+    color: #65feea;
+}
+
 .headerActions {
     display: flex;
     align-items: center;
