@@ -12,13 +12,17 @@ export const Main = ({ activePunk }) => {
       <div className="mainContent">
         <div className="punkHighlight">
           <div className="punkContainer">
-            <img className="selectedPunk" src={punkhead} alt="selected punk" />
+            <img
+              className="selectedPunk"
+              src={activePunk.image_url}
+              alt="selected punk"
+            />
           </div>
         </div>
 
         <div className="punkDetails" style={{ color: "#fff" }}>
-          <div className="title">Headphones</div>
-          <span className="itemNumber">·#8</span>
+          <div className="title">{activePunk.name}</div>
+          <span className="itemNumber">·#{activePunk.id}</span>
         </div>
 
         <div className="owner">
@@ -28,7 +32,7 @@ export const Main = ({ activePunk }) => {
 
           <div className="ownerDetails">
             <div className="ownerNameAndHandle">
-              <div className="ownerAddress"></div>
+              <div className="ownerAddress">{activePunk.owner.address}</div>
               <div className="ownerHandle">vjerome2</div>
             </div>
 
