@@ -8,8 +8,9 @@ export const PunkList = ({ punkListData }) => {
       <div className="punkList">
         {punkListData.map((punk) => (
           <CollectionCard
+            key={punk.id}
             id={punk.id}
-            traits={[{ value: 7 }]}
+            traits={punk.traits}
             name={punk.name}
             image={punk.image_url}
           />
