@@ -8,4 +8,6 @@
   box-sizing: inherit;
 }
 
-App {}
+App {
+  border-color: #5060f3;
+}
