@@ -1,3 +1,5 @@
+import google from "../images/google.svg";
+import loginHero from "../images/login-hero.svg";
 import loginLogo from "../images/login-logo.svg";
 import styled from "styled-components";
 
@@ -14,6 +16,18 @@ export const Login = (props) => {
           <SignIn>Sign In</SignIn>
         </div>
       </Nav>
+      <Section>
+        <Hero>
+          <h1>Welcome to your professional community</h1>
+          <img src={loginHero} alt="" />
+        </Hero>
+        <Form>
+          <Google>
+            <img src={google} alt="" />
+            Sign in with Google
+          </Google>
+        </Form>
+      </Section>
     </Container>
   );
 };
@@ -50,7 +64,7 @@ const Join = styled.a`
   margin-right: 12px;
   border-radius: 4px;
   &:hover {
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: rgba(0, 0, 0, 0.05);
     color: rgba(0, 0, 0, 0.9);
     text-decoration: none;
   }
@@ -72,3 +86,106 @@ const SignIn = styled.a`
     text-decoration: none;
   }
 `;
+const Section = styled.section`
+  display: flex;
+  align-content: flex-start;
+  min-height: 760px;
+  padding-bottom: 138px;
+  padding-top: 40px;
+  padding: 60px 0;
+  position: relative;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 1128px;
+  align-items: center;
+  margin: auto;
+  @media (max-width: 768px) {
+    margin: auto;
+    min-height: 0px;
+  }
+`;
+
+const Hero = styled.div`
+  width: 100%;
+  h1 {
+    color: #2977c9;
+    padding-bottom: 0;
+    width: 55%;
+    font-size: 56px;
+    font-weight: 200;
+    line-height: 60px;
+    @media (max-width: 768px) {
+      text-align: center;
+      font-size: 26px;
+      width: 100%;
+      line-height: 2;
+    }
+  }
+  img {
+    /* z-index: -1; */
+    width: 700px;
+    height: 670px;
+    position: absolute;
+    bottom: -2px;
+    right: -150px;
+
+    @media (max-width: 768px) {
+      top: 230px;
+      width: initial;
+      position: initial;
+      height: initial;
+    }
+  }
+`;
+const Form = styled.form`
+  margin-top: 100px;
+  width: 408px;
+  @media (max-width: 550px) {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+  }
+`;
+const Google = styled.button`
+  z-index: 0;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  background-color: #fff;
+  align-items: center;
+  height: 56px;
+  width: 100%;
+  border-radius: 26px;
+  box-shadow: inset 0 0 0 1px rgb(0 0 0 / 60%), inset 0 0 0 2px rgb(0 0 0 / 0%),
+    inset 0 0 0 2px rgb(0 0 0 / 0%);
+  vertical-align: middle;
+  transition-duration: 250ms;
+  font-size: 20px;
+  color: rgba(0, 0, 0, 0.5);
+  &:hover {
+    background-color: rgba(207, 207, 207, 0.25);
+    color: rgba(0, 0, 0, 0.75);
+  }
+`;
+
+//^ const Google = styled.div`
+//^   display: flex;
+//^   vertical-align: middle;
+// ^  border: 1px solid black;
+//  ^ border-radius: 25px;
+//^   > p {
+// ^    padding: 2px 8px;
+//  ^ }
+//^   @media (max-width: 768px) {
+// ^    display: flex;
+// ^    vertical-align: middle;
+//  ^   text-align: center;
+//   ^  width: 100%;
+//    ^ /* border: 1px solid black;
+// ^    border-radius: 25px; */
+//  ^   > p {
+//   ^    padding-top: 2px;
+//   ^    vertical-align: middle;
+//    ^ }
+//^   }
+//^ `;
