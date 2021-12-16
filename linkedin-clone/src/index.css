@@ -18,6 +18,10 @@ html {
 
 }
 
+body {
+  font-family: Arial, sans-serif;
+}
+
 div,
 h1,
 h2,
