@@ -233,7 +233,7 @@ const SignOut = styled.div`
   width: 100px;
   height: 40px;
   font-size: 16px;
-  transition-duration: 167ms;
+  transition-duration: 700ms;
   text-align: center;
   display: none;
 `;
