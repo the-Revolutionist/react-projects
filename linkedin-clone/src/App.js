@@ -8,6 +8,8 @@ import {
   Switch,
 } from "react-router-dom";
 
+import { Header } from "./components/Header";
+import { Home } from "./components/Home";
 import { Login } from "./components/Login";
 
 function App() {
@@ -17,6 +19,10 @@ function App() {
         <Switch>
           <Route exact path="/">
             <Login />
+          </Route>
+          <Route exact path="/home">
+            <Header />
+            <Home />
           </Route>
         </Switch>
       </Router>

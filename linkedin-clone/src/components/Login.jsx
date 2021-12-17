@@ -126,8 +126,8 @@ const Hero = styled.div`
     width: 700px;
     height: 670px;
     position: absolute;
-    bottom: -2px;
-    right: -150px;
+    bottom: -100px;
+    right: -50px;
 
     @media (max-width: 768px) {
       top: 230px;
@@ -140,9 +140,10 @@ const Hero = styled.div`
 const Form = styled.form`
   margin-top: 100px;
   width: 408px;
-  @media (max-width: 550px) {
+  @media (max-width: 768px) {
     margin-top: 50px;
     display: flex;
+    width: 100%;
     flex-direction: column;
   }
 `;
