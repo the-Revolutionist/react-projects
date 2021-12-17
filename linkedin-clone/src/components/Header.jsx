@@ -128,7 +128,7 @@ const Search = styled.div`
     max-width: 280px;
     input {
       background-color: #eef3f8;
-      border-radius: 12px;
+      border-radius: 7px;
       color: rgb(28 112 196);
       width: 218px;
       padding: 0 8px 0 40px;

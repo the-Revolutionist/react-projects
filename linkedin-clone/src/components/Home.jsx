@@ -24,7 +24,7 @@ export const Home = (props) => {
 };
 
 const Container = styled.div`
-  padding: 52px;
+  padding: 52px 0;
   max-width: 100%;
 `;
 
@@ -59,9 +59,6 @@ const Section = styled.div`
   }
 `;
 const Layout = styled.div`
-  > div {
-    border: 1px solid black;
-  }
   display: grid;
   grid-template-areas: "leftside main rightside";
   grid-template-columns: minmax(0, 5fr) minmax(0, 12fr) minmax(300px, 7fr);
@@ -71,6 +68,7 @@ const Layout = styled.div`
   margin: 25px 0;
   @media (max-width: 768px) {
     display: flex;
+
     flex-direction: column;
     padding: 0 5px;
   }
