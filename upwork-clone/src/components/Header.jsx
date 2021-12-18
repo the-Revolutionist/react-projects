@@ -36,16 +36,19 @@ const Content = styled.div`
 `;
 const AuthLinks = styled.div`
   display: flex;
-  width: 120px;
+  width: 115px;
   height: 30px;
   justify-content: space-between;
-  margin-right: 25px;
+  margin-right: 35px;
   > p {
     cursor: pointer;
     color: gray;
     margin-top: 5px;
     font-size: 14px;
     font-family: Helvetica, sans-serif;
+    &:hover {
+      color: #14a800;
+    }
   }
 `;
 const Logo = styled.div`
