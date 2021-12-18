@@ -12,7 +12,7 @@ export const Header = () => {
         <Logo />
         <AuthLinks>
           <p>Log In</p>
-          <p>Sign-Up</p>
+          <p>Sign Up</p>
         </AuthLinks>
       </Content>
     </Container>
