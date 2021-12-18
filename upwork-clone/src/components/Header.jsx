@@ -1,15 +1,17 @@
-import { MenuIcon } from "@mui/icons-material";
+import { Menu } from "@mui/icons-material";
 import logo from "../assets/images/logo.png";
 import styled from "styled-components";
 
 export const Header = () => {
   return (
     <Container>
-      <div className="menu"></div>
+      <MenuIconContainer>
+        <Menu fontSize="large" style={{ color: "GrayText" }} />
+      </MenuIconContainer>
       <Content>
         <Logo />
         <AuthLinks>
-          <p>Login</p>
+          <p>Log In</p>
           <p>Sign-Up</p>
         </AuthLinks>
       </Content>
@@ -20,14 +22,10 @@ export const Header = () => {
 const Container = styled.div`
   box-sizing: border-box;
   margin: 0;
-  font-family: sans-serif;
   display: flex;
   height: 56px;
   width: 100vw;
   border-bottom: 2px solid rgba(0, 0, 0, 0.05);
-  > .menu {
-    width: 50px;
-  }
 `;
 const Content = styled.div`
   width: 100%;
@@ -35,16 +33,31 @@ const Content = styled.div`
   display: flex;
   justify-content: space-between;
   padding: 5px 10px;
-  border-left: 2px solid rgba(0, 0, 0, 0.05);
 `;
 const AuthLinks = styled.div`
   display: flex;
-  width: 150px;
-  justify-content: space-around;
+  width: 120px;
+  height: 30px;
+  justify-content: space-between;
+  margin-right: 25px;
+  > p {
+    cursor: pointer;
+    color: gray;
+    margin-top: 5px;
+    font-size: 14px;
+    font-family: Helvetica, sans-serif;
+  }
 `;
 const Logo = styled.div`
+  cursor: pointer;
   background: url(${logo});
-  height: 50px;
-  width: 200px;
+  height: 30px;
+  width: 110px;
   background-repeat: no-repeat;
+`;
+const MenuIconContainer = styled.div`
+  cursor: pointer;
+  width: 40px;
+  padding-left: 5px;
+  padding-top: 5px;
 `;

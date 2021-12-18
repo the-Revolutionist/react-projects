@@ -8,6 +8,6 @@
   box-sizing: inherit;
 }
 
-App {
-  border-color: #5060f3;
+html {
+  height: 2000px;
 }
