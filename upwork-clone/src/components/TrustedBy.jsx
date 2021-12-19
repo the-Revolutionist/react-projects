@@ -22,7 +22,8 @@ const TrustedByContainer = styled.div`
   color: gray;
   justify-content: left;
   margin-left: 30px;
-  margin-top: 40px;
+  margin-top: 10px;
+  width: 425px;
 `;
 const TrustedLabel = styled.div`
   font-size: 14px;

@@ -1,21 +1,45 @@
 import { ButtonGroup } from "@mui/material";
+import heroImage from "../assets/images/globe-2x.webp";
 import styled from "styled-components";
 
 export const TopContainer = () => {
   return (
     <Container>
-      <h1>How work should work</h1>
-      <p>
-        Hire the best people. Find the best opportunities. All from right here.
-      </p>
-      <ButtonGroup>
-        <TalentButton>Find Talent</TalentButton>
-        <WorkButton>Find Work</WorkButton>
-      </ButtonGroup>
+      <Content>
+        <h1>How work should work</h1>
+        <p>
+          Hire the best people. Find the best opportunities. All from right
+          here.
+        </p>
+        <ButtonGroup>
+          <TalentButton>Find Talent</TalentButton>
+          <WorkButton>Find Work</WorkButton>
+        </ButtonGroup>
+      </Content>
+      <HeroImageContainer>
+        <img src={heroImage} alt="" />
+      </HeroImageContainer>
     </Container>
   );
 };
 const Container = styled.div`
+  display: flex;
+  flex-direction: row;
+  height: 300px;
+  margin-left: -50px;
+  > div > img {
+    max-width: 450px;
+    margin-left: 50px;
+  }
+  @media (max-width: 768px) {
+    margin-left: 0px;
+    > div > img {
+      visibility: hidden;
+      flex-direction: row;
+    }
+  }
+`;
+const Content = styled.div`
   padding-left: 30px;
   > h1 {
     font-family: "Helvetica Neue", "Source Serif Pro", serif;
@@ -63,3 +87,4 @@ const WorkButton = styled.button`
     background-color: #f2f7f2;
   }
 `;
+const HeroImageContainer = styled.div``;
