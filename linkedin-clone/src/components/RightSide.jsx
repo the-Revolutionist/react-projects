@@ -1,5 +1,9 @@
 import feed from "../images/feed-icon.svg";
+import right from "../images/right-icon.svg";
 import styled from "styled-components";
+
+const bannerImg =
+  "https://static-exp1.licdn.com/scds/common/u/images/promo/ads/li_evergreen_jobs_ad_300x250_v1.jpg";
 
 export const RightSide = () => {
   return (
@@ -29,7 +33,14 @@ export const RightSide = () => {
             </div>
           </li>
         </FeedList>
+        <Recommendation>
+          View all recommendations
+          <img src={right} alt="" />
+        </Recommendation>
       </FollowCard>
+      <BannerCard>
+        <img src={bannerImg} alt="" />
+      </BannerCard>
     </Container>
   );
 };
@@ -74,10 +85,39 @@ const FeedList = styled.ul`
     padding: 14px;
     align-items: center;
     border-radius: 15px;
+    box-sizing: border-box;
+    font-weight: 600;
+    display: inline-flex;
+    justify-content: center;
+    max-height: 32px;
+    max-width: 480px;
+    text-align: center;
     outline: none;
     &:hover {
       background-color: rgba(0, 0, 0, 0.15);
     }
   }
 `;
-const Avatar = styled.div``;
+const Avatar = styled.div`
+  background-image: url("https://static-exp1.licdn.com/sc/h/1b4vl1r54ijmrmcyxzoidwmxs");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 48px;
+  height: 48px;
+  margin-right: 8px;
+`;
+
+const Recommendation = styled.a`
+  color: #0a66c2;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+`;
+
+const BannerCard = styled(FollowCard)`
+  img {
+    width: 100%;
+    height: 100%;
+  }
+`;
