@@ -31,13 +31,13 @@ const Content = styled.div`
 `;
 
 const Layout = styled.div`
+  padding: 5px 25px;
   display: grid;
   grid-template-areas: "leftside main rightside";
-  grid-template-columns: minmax(0, 5fr) minmax(0, 10fr) minmax(300px, 7fr);
+  grid-template-columns: minmax(0, 4fr) minmax(0, 10fr) minmax(300px, 7fr);
   column-gap: 25px;
   row-gap: 25px;
   grid-template-rows: auto;
-  margin: 25px 0;
 
   @media (max-width: 768px) {
     display: flex;

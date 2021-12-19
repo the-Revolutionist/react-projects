@@ -62,12 +62,12 @@ const ShareBox = styled(CommonCard)`
   display: flex;
   flex-direction: column;
   color: #958b7b;
-  margin: 0 0 8px;
   background: white;
+
   div {
     display: flex;
-    padding-left: 10px;
-    padding-top: 10px;
+    padding: 10px;
+    justify-content: space-between;
     button {
       outline: none;
       color: rgba(0, 0, 0, 0.6);
@@ -75,36 +75,23 @@ const ShareBox = styled(CommonCard)`
       line-height: 1.5;
       min-height: 48px;
       background: transparent;
+      font-weight: 550;
       border: none;
       display: flex;
       align-items: center;
       > span {
-        margin-left: 15px;
+        margin-left: 10px;
       }
     }
     :first-child {
       display: flex;
+      justify-content: left;
+      > button {
+        width: 80%;
+        margin-left: 15px;
+        border-radius: 50px;
+        border: 1px solid rgba(0, 0, 0, 0.6);
+      }
     }
   }
 `;
-// const ButtonGroup = styled.div`
-//   display: flex;
-//   padding-bottom: 20px;
-//   justify-content: space-between;
-//   > button {
-//     padding-top: 5px;
-//     padding: 15px;
-//     border: none;
-//     display: inline-flex;
-//     align-items: center;
-//     background-color: transparent;
-//     > span {
-//       padding: 4px 8px;
-//       font-family: Roboto, sans-serif;
-//       font-size: 14px;
-//     }
-//     &:hover {
-//       background-color: #e1e1e0;
-//     }
-//   }
-// `;
