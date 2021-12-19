@@ -9,7 +9,7 @@ export const Home = (props) => {
     <Container>
       <Content>
         <Section />
-        <Layout className="layout">
+        <Layout>
           <LeftSide />
           <Main />
           <RightSide />
@@ -38,9 +38,9 @@ const Layout = styled.div`
   row-gap: 25px;
   grid-template-rows: auto;
   margin: 25px 0;
+
   @media (max-width: 768px) {
     display: flex;
-
     flex-direction: column;
     padding: 0 5px;
   }
