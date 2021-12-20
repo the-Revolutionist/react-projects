@@ -69,6 +69,7 @@ const ShareBox = styled(CommonCard)`
     padding: 10px;
     justify-content: space-between;
     button {
+      cursor: pointer;
       outline: none;
       color: rgba(0, 0, 0, 0.6);
       font-size: 14px;
@@ -85,13 +86,17 @@ const ShareBox = styled(CommonCard)`
     }
     :first-child {
       display: flex;
-      justify-content: left;
+      align-items: center;
+      > img {
+      }
       > button {
         width: 80%;
         margin-left: 15px;
         border-radius: 50px;
         border: 1px solid rgba(0, 0, 0, 0.6);
       }
+    }
+    ::nth-child() {
     }
   }
 `;
