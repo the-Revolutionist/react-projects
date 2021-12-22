@@ -1,6 +1,7 @@
 import ArtTrackTwoToneIcon from "@mui/icons-material/ArtTrackTwoTone";
 import EventNoteTwoToneIcon from "@mui/icons-material/EventNoteTwoTone";
 import { Icon } from "@mui/material";
+import MoreHorizIcon from "@mui/icons-material/MoreHoriz";
 import PanoramaTwoToneIcon from "@mui/icons-material/PanoramaTwoTone";
 import SubscriptionsTwoToneIcon from "@mui/icons-material/SubscriptionsTwoTone";
 import styled from "styled-components";
@@ -24,22 +25,50 @@ export const Main = (props) => {
               <PanoramaTwoToneIcon sx={{ color: "#70b5f9", fontSize: 20 }} />
               <span>Photo</span>
             </button>
+
             <button>
               <SubscriptionsTwoToneIcon
                 sx={{ color: "#7fc15e", fontSize: 20 }}
               />
               <span>Video</span>
             </button>
+
             <button>
               <EventNoteTwoToneIcon sx={{ color: "#e7a33e", fontSize: 20 }} />
               <span>Event</span>
             </button>
+
             <button>
-              <ArtTrackTwoToneIcon sx={{ color: "#fc9295", fontSize: 20 }} />
+              <ArtTrackTwoToneIcon sx={{ color: "#fc9295", fontSize: 30 }} />
               <span>Write Article</span>
             </button>
           </div>
         </ShareBox>
+        <SelectContainer>
+          <label htmlFor="sorter">
+            <span> Sort By:</span>
+          </label>
+          <select name="sorted" placeholder="Sort By">
+            <option> Top</option>
+            <option> Recent</option>
+          </select>
+        </SelectContainer>
+
+        <Article>
+          <SharedActor>
+            <a>
+              <img src={user} alt="" />
+              <div>
+                <span>Title</span>
+                <span>Info</span>
+                <span>Date</span>
+              </div>
+            </a>
+            <button>
+              <MoreHorizIcon />
+            </button>
+          </SharedActor>
+        </Article>
       </Container>
     </>
   );
@@ -65,9 +94,6 @@ const ShareBox = styled(CommonCard)`
   background: white;
 
   div {
-    display: flex;
-    padding: 10px;
-    justify-content: space-between;
     button {
       cursor: pointer;
       outline: none;
@@ -76,27 +102,91 @@ const ShareBox = styled(CommonCard)`
       line-height: 1.5;
       min-height: 48px;
       background: transparent;
-      font-weight: 550;
+      font-weight: 600;
       border: none;
       display: flex;
       align-items: center;
       > span {
-        margin-left: 10px;
+        margin-left: 8px;
       }
     }
     :first-child {
       display: flex;
       align-items: center;
+      padding: 8px 16px 0px 16px;
       > img {
+        width: 48px;
+        border-radius: 50%;
+        margin-right: 8px;
       }
       > button {
-        width: 80%;
-        margin-left: 15px;
-        border-radius: 50px;
+        margin: 0px 8px;
+        flex-grow: 1;
+        font-size: 14px;
+        border-radius: 35px;
+        padding-left: 8px;
         border: 1px solid rgba(0, 0, 0, 0.6);
+        background-color: white;
       }
     }
-    ::nth-child() {
+    :nth-child(2) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      padding-bottom: 4px;
+    }
+  }
+`;
+
+const Article = styled(CommonCard)`
+  padding: 0;
+  margin: 0 0 8px;
+  overflow: visible;
+`;
+const SharedActor = styled.div`
+  display: flex;
+  flex-wrap: nowrap;
+  padding: 16px 40px 0px 8px;
+  margin-bottom: 8px;
+  align-items: center;
+  a {
+    margin-right: 12px;
+    flex-grow: 1;
+    overflow: hidden;
+    display: flex;
+    text-decoration: none;
+  }
+  img {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+  }
+  div {
+    display: flex;
+    flex-direction: column;
+  }
+`;
+const SelectContainer = styled.div`
+  border: none;
+  display: flex;
+  justify-content: right;
+  width: 100%;
+  > s {
+    text-decoration: line-through;
+    > span {
+      text-decoration: none;
+    }
+  }
+  > select {
+    border: none;
+    background: transparent;
+    :active {
+      border: none;
+      outline: none;
+    }
+    :focus {
+      border: none;
+      outline-style: none;
     }
   }
 `;
