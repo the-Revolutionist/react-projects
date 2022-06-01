@@ -26,8 +26,6 @@ export const Main = ({ activePunk }) => {
         </div>
 
         <div className="owner">
-          <div className="ownerImageContainer">
-            <img src={punkhead} alt="" />
           </div>
 
           <div className="ownerDetails">
@@ -36,6 +34,8 @@ export const Main = ({ activePunk }) => {
               <div className="ownerHandle">vjerome2</div>
             </div>
 
+          <div className="ownerImageContainer">
+            <img src={punkhead} alt="" />
             <div className="ownerLink">
               <img src={instagram} alt="" />
             </div>
