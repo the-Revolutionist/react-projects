@@ -30,13 +30,16 @@ export const Header = (props) => {
             </SearchIcon>
           </Search>
           <Nav>
+
             <NavListWrap>
+
               <NavList>
                 <a>
                   <img src={navHome} alt="" />
                   <span>Home</span>
                 </a>
               </NavList>
+
               <NavList>
                 <a>
                   <img src={navNetwork} alt="" />
@@ -80,6 +83,7 @@ export const Header = (props) => {
               </User>
 
               <Work>
+
                 <a>
                   <img src={navWork} alt="" />
                   <span>
@@ -87,6 +91,7 @@ export const Header = (props) => {
                     <img src={downIcon} alt="" />
                   </span>
                 </a>
+                
               </Work>
             </NavListWrap>
           </Nav>
